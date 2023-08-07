@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Forest bathing in Caracas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <meta property="og:title" content="Forest bathing in Caracas">
+    <meta property="og:description" content="How I found solace in the sights and sounds of a Venezuelan national park.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:@anaeazpurua" content="@your_twitter_username">
+
+
+    <style>
+      #scrolly {
+        position: relative;
+        padding: 1rem;
+      }
+
+      .scrolly-overlay {
+        position: relative;
+        padding: 0;
+        max-width: 35rem;
+        margin: 0 auto;
+      }
+
+      .sticky-thing {
+        position: -webkit-sticky;
+        position: sticky;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        z-index: 0;
+        top: 0;
+        height: 100vh;
+        /* Center everything inside */
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .step {
+        margin: 0 auto 2rem auto;
+        margin-bottom: 25rem;
+        background-color: #eee;
+        background-color: #fff;
+        color: black;
+      }
+
+      .step p {
+        font-family: 'Roboto', sans-serif;
+        text-align: left;
+        padding: 1rem;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30px;
+        margin-bottom: 15px;
+      }
+
+      img {
+        overflow-clip-margin: content-box;
+        overflow: clip;
+      }
+       
+      h1 {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 32px;
+        margin: 0;
+        line-height: 40px;
+        color: #121212;
+        max-width: 600px;
+        margin-bottom: 8px;
+      }
+
+      h2 {
+        font-size: 21px;
+        line-height: 26px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        margin-bottom: 5px;
+        margin-top: 20px;
+      }   
+
+      h3 {
+          font-family: 'Roboto', sans-serif;    
+          font-size: 18px;
+          line-height: 24px;
+          margin: 0;
+          margin-bottom: 4px;
+      }
+
+      a {
+          text-decoration: none;
+          border-bottom: 1px dotted #000000; 
+          color: #000000;
+          padding-bottom: 0px;
+      }
+
+      a:hover {
+          text-decoration: none;
+      }
+
+      .subhed {
+          font-size: 21px;
+          font-family: 'Roboto', sans-serif;
+          padding-bottom: 4px;
+          margin-bottom: 30px;
+          margin-top: 0;
+          color: #333;
+      }
+
+      .byline {
+          font-family: 'Roboto', sans-serif;
+          font-size: 18px;
+          margin-bottom: 12px;
+          color: #808080;
+        }
+
+      .content {
+          /* max-width: 760px; */
+          max-width: 600px;
+          margin: 0 auto;
+          padding-left: 5vw;
+          padding-right: 5vw;
+        }
+
+      .article__text {
+          font-family: 'Roboto', sans-serif;
+          line-height: 30px;
+          margin-bottom: 15px;
+          font-size: 18px;
+          color: #000000;
+          font-weight: 400;
+        }
+
+      img {
+          width: 100%;
+        }
+
+      .image__wrapper {
+          max-width: 945px;
+          margin: 0 auto;
+          text-align: center;
+          margin-bottom: 43px;
+        }
+        .hidden { visibility: hidden; }
+
+      /* When it's less than 700 pixels wide, do normal scrollytelling */
+      @media only screen and (min-width: 700px) {
+        #scrolly.side-by-side {
+          display: flex;
+        }
+
+        #scrolly.side-by-side > div {
+          flex-basis: 0;
+          flex-grow: 1;
+          flex-shrink: 1;
+          padding: 0.75em;
+        }
+
+        #scrolly.side-by-side .scrolly-overlay {
+          margin-top: 70vh;
+          order: 0;
+          /* Change these to adjust sizing options */
+          min-width: 15rem;
+          max-width: 20rem;
+        }
+
+        #scrolly.side-by-side .sticky-thing {
+          order: 1;
+          flex-grow: 2;
+        }
+        .fit {
+        max-width: 100%;
+        max-height: 100%;
+      }
+      }
+    </style>
+	<script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/scrollama/3.0.4/scrollama.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.3.0/d3.min.js"></script>
+	
+  </head>
+
+  <body>
+    <div class="image__wrapper">
+      <img src="tiny_images/hero_image.png" alt="Panoramic view of El Avila National Park, Caravas, Venezuela.">
+  </div> 
+    <div class="content">
+      <p class="label">WELLBEING</p>
+      <h1 class="title">Forest Bathing in Caracas</h1>
+      <p class="subhed">How I found solace in the sights and sounds of a Venezuelan national park.</p>
+    </div>
+
+   <div class="content">
+      <p class="byline">By Ana Elena Azpúrua</p>
+      <!--<p class="date">July 23, 2023</p>-->
+   </div>
+
+   <div class="content">
+    <p class="article__text">When my father passed away, I visited the mountains surrounding my hometown of Caracas. Connecting with nature helped me cope. The Japanese call this “forest bathing.”
+    </p>
+
+    <p class="article__text">Keep scrolling to experience what I found on the trail that leads to a small waterfall known as Quebrada Quintero:
+    </p>
+    
+  </div>
+      <section id="scrolly">
+        <div class="sticky-thing">
+          <div class="ai2html-container">
+
+<!-- ai2html goes below this line -->
+
+
+<!-- Generated by ai2html v0.113.0 - 2023-08-06 19:03 -->
+<!-- ai file: map_forest.ai -->
+<style media="screen,print">
+	#g-map_forest-box ,
+	#g-map_forest-box .g-artboard {
+		margin:0 auto;
+	}
+	#g-map_forest-box p {
+		margin:0;
+	}
+	#g-map_forest-box .g-aiAbs {
+		position:absolute;
+	}
+	#g-map_forest-box .g-aiImg {
+		position:absolute;
+		top:0;
+		display:block;
+		width:100% !important;
+	}
+	#g-map_forest-box .g-aiSymbol {
+		position: absolute;
+		box-sizing: border-box;
+	}
+	#g-map_forest-box .g-aiPointText p { white-space: nowrap; }
+	#g-map_forest-desktop {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-map_forest-desktop p {
+		font-family:Roboto;
+		font-weight:400;
+		line-height:17px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:14px;
+		text-align:left;
+		color:rgb(0,0,0);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-map_forest-desktop .g-pstyle0 {
+		font-weight:700;
+		height:17px;
+		text-align:right;
+	}
+	#g-map_forest-desktop .g-pstyle1 {
+		font-weight:900;
+		line-height:22px;
+		font-size:18px;
+	}
+	#g-map_forest-desktop .g-pstyle2 {
+		height:17px;
+	}
+	#g-map_forest-desktop .g-pstyle3 {
+		line-height:19px;
+		height:19px;
+		font-size:16px;
+		text-align:right;
+	}
+	#g-map_forest-desktop .g-pstyle4 {
+		height:17px;
+		text-align:right;
+	}
+	#g-map_forest-desktop .g-pstyle5 {
+		height:17px;
+		text-align:center;
+		color:rgb(96,96,96);
+	}
+	#g-map_forest-desktop .g-pstyle6 {
+		height:17px;
+		text-align:center;
+	}
+	#g-map_forest-mobile {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-map_forest-mobile p {
+		font-family:Roboto;
+		font-weight:400;
+		line-height:17px;
+		height:auto;
+		opacity:1;
+		letter-spacing:0em;
+		font-size:14px;
+		text-align:left;
+		color:rgb(0,0,0);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-map_forest-mobile .g-pstyle0 {
+		font-weight:900;
+		line-height:19px;
+		font-size:16px;
+	}
+	#g-map_forest-mobile .g-pstyle1 {
+		font-weight:700;
+		line-height:19px;
+		height:19px;
+		font-size:16px;
+	}
+	#g-map_forest-mobile .g-pstyle2 {
+		height:17px;
+		text-align:right;
+	}
+	#g-map_forest-mobile .g-pstyle3 {
+		height:17px;
+	}
+	#g-map_forest-mobile .g-pstyle4 {
+		line-height:14px;
+		height:14px;
+		font-size:12px;
+		text-align:center;
+		color:rgb(96,96,96);
+	}
+
+</style>
+
+<div id="g-map_forest-box" class="ai2html">
+
+	<!-- Artboard: desktop -->
+	<div id="g-map_forest-desktop" class="g-artboard" style="width:833px; height:600.564496685154px;" data-aspect-ratio="1.387" data-min-width="833">
+<div style=""></div>
+		<img id="g-map_forest-desktop-img" class="g-map_forest-desktop-img g-aiImg" alt="" src="map_forest-desktop.png"/>
+<!-- Generator: Adobe Illustrator 24.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg class="g-map_forest-desktop-interactions-img g-aiImg" version="1.2" baseProfile="tiny" id="g-map_forest-desktop-interactions-img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 x="0px" y="0px" viewBox="0 0 833 600.565" overflow="visible" xml:space="preserve">
+<g>
+	<path id="trail" data-name="trail" fill="none" stroke="#E67C1D" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" d="M540.5,49.5
+		l-7.057,16.376l3.537,9.591h-4.715l-1.179,8.393l-2.357,5.994L528.5,89.5l-2.129-0.844l-5.895-2.398L518.5,86.5l-1.559,2.156
+		l-1.179,9.591l-9.429-5.994l-8.252,3.597l-3.536,3.596l-2.358,3.597v4.795v3.596h-4.715l-4.715,2.398L482.5,114.5l0.256,1.731
+		l-1.178,11.989l-8.251-1.199h-8.252l-4.715-1.199l-4.714,2.398l-4.715,14.387l-12.966-3.597l-3.537,1.199l-2.358,1.199h-3.536
+		h-4.715l-3.536-1.199l-3.537-1.199h-4.715l-3.536,2.398v5.994l-2.358,3.597l-1.179,3.596v3.597l-1.178,3.596l1.178,3.597
+		l-1.178,2.397l-2.358,3.597l-1.178,3.596l-2.358,3.597l-3.537,3.596v3.597l-3.536,3.596l-1.179,2.398l-1.178,3.597v3.596v3.597
+		v3.596l-2.358,3.597l-2.358,2.397l-2.358,2.398l-2.358,2.397l-3.536,1.199l-3.537,2.398l-2.358,1.199h-3.536l-3.536-1.199
+		l-4.715-1.199h-4.715l-4.715,2.398l-2.358,3.596l-3.536,2.398l-2.358,9.592l5.893,15.585l-5.893,10.791l-5.895,14.387v13.188
+		l1.179,3.596l3.536-1.199l2.358-1.198l3.537-1.199l3.536-1.199h3.536h3.537h3.536l3.537,1.199l1.178,3.596v3.597l-1.178,3.596
+		l3.536-1.199l-3.536,1.199l-3.537,3.597l-4.715-1.199l-3.536-1.199l-3.536,1.199l-2.358,3.596l-2.358,2.398l-3.537,2.398
+		l-1.178,2.397l-2.358-2.397l-3.536,1.199l-2.358,3.596l-3.537,2.398l-2.358,2.397h-3.536l-3.537-1.198l-1.178-2.398l-3.536-2.398
+		h-3.537l-3.536-2.397l-2.358-1.199l-3.537-1.199l-3.536-2.398l-1.178-3.596l-1.179-3.597l-1.178-2.397v-4.796l-2.358-2.397
+		l-2.358-3.597l-2.358-1.199l-2.358-3.596l-2.358-2.398l-2.358-4.795l-2.358-2.398v-3.596l-2.358-3.597l-2.358-3.596l-1.178-2.398
+		l-3.537-3.596l-2.358-2.398l-3.536-1.199l-2.358-2.397l-2.358-3.597l-1.178-3.596l-2.358-2.398v-3.597l-1.179-3.596l-2.358-3.597
+		l-1.178-3.596l-2.358-3.597l-2.358-2.397l-2.358-2.398l-3.536-2.398l-2.358-2.397l-2.358-2.398l-3.537-2.397l-2.358-2.398
+		l-1.178-3.597l-3.536-3.596l-3.537-1.199l-3.536-1.199h-3.537l-3.536-2.397l-3.536-2.398l-1.179-2.398l-2.358-1.199l-3.536-2.397
+		l-2.358-2.398l-2.358-3.596l-3.536-1.199l-2.358-3.597l3.536,1.199h-3.536l-3.537-2.398l-3.536-2.397l-2.358-2.398l-3.537-1.199
+		l2.358-3.596l-1.178-3.597l-3.536-1.199l-1.179-3.596l-2.358-3.597l-2.358-3.596l-5.893-3.597l-5.894-1.198l-5.895-4.796
+		l-7.073-2.397l-5.894-5.995l-7.073,1.199l-14.145,1.199l15.324,9.592l10.609,3.596l3.536,4.796v5.994l-1.178,5.994l2.358,5.994
+		l7.073,2.398l7.072,4.795l-3.536,1.199l-1.178,9.592l-11.788,7.193l-4.715,32.37l34.185,21.58h7.072l3.537,14.387l16.502,13.188
+		l7.073,21.58l3.536-5.994l18.861,40.763l4.715,2.397l4.715,3.597l3.536,7.193v5.994h4.715l-1.178,4.795l2.357,3.597l2.358,3.596
+		v8.393l8.252,2.398l4.715,3.596l2.357,3.597l3.537,1.198l-1.179,3.597l-3.536,2.398h4.715l3.536,2.397l1.179,4.795l3.536,3.597
+		l3.537,4.795l1.178,5.994l1.178,4.796v3.596l2.358,3.597h3.537l4.715,3.596l4.715,3.597v5.994v5.994l2.357,4.795l-1.178,3.597
+		v3.596l2.358,3.596l3.536,2.398l1.179,3.597l1.178,4.795l1.179,4.795l2.358,2.398l2.358,3.596l2.358,3.597l1.178,3.596v4.795
+		l1.178,3.597v3.596l-1.178,2.398l-1.178,3.597l-2.358,2.397l-2.358,3.597l7.072-1.199l3.409,4.966l9.222,12.763l14.481,20.636
+		l2.358,2.398l2.358,2.397l2.358,3.597l2.358,3.596l2.358,3.597l2.358,3.596l3.536,3.597v4.795l-1.178,3.596l-3.537,2.398
+		l-2.358,1.199l-3.536,2.397"/>
+	<path id="icon-waterfall" data-name="icon-waterfall" fill="#808080" d="M555.328,40.519c0,5.169-4.19,9.36-9.36,9.36c-5.169,0-9.36-4.19-9.36-9.36
+		s4.19-9.36,9.36-9.36C551.138,31.159,555.328,35.35,555.328,40.519z"/>
+	<path id="icon-descent" data-name="icon-descent" fill="#808080" d="M537.649,92.517c0,5.169-4.19,9.36-9.36,9.36s-9.36-4.19-9.36-9.36
+		s4.19-9.36,9.36-9.36S537.649,87.348,537.649,92.517z"/>
+	<path id="icon-watersound" data-name="icon-watersound" fill="#808080" d="M485.65,86.91l10.4,18.012h-20.799L485.65,86.91z"/>
+	<path id="icon-frogs" data-name="icon-frogs" fill="#808080" d="M255.65,380.988L266.05,399h-20.799L255.65,380.988z"/>
+	<path id="icon-caracas" data-name="icon-caracas" fill="#808080" d="M463.811,127.876c0,5.169-4.19,9.36-9.36,9.36c-5.169,0-9.36-4.19-9.36-9.36
+		s4.19-9.36,9.36-9.36C459.621,118.516,463.811,122.707,463.811,127.876z"/>
+	<path id="icon-trunk" data-name="icon-trunk" fill="#808080" d="M403.493,180.915c0,5.169-4.19,9.36-9.36,9.36s-9.36-4.19-9.36-9.36
+		s4.19-9.36,9.36-9.36S403.493,175.745,403.493,180.915z"/>
+	<path id="icon-shortcut" data-name="icon-shortcut" fill="#808080" d="M372.294,300.511c0,5.169-4.19,9.36-9.36,9.36s-9.36-4.19-9.36-9.36
+		c0-5.169,4.19-9.36,9.36-9.36S372.294,295.342,372.294,300.511z"/>
+	<path id="icon-plain" data-name="icon-plain" fill="#808080" d="M303.656,308.831c0,5.169-4.19,9.36-9.36,9.36s-9.36-4.19-9.36-9.36
+		s4.19-9.36,9.36-9.36S303.656,303.662,303.656,308.831z"/>
+	<path id="icon-stairs" data-name="icon-stairs" fill="#808080" d="M131.021,130.996c0,5.169-4.19,9.36-9.36,9.36c-5.169,0-9.36-4.19-9.36-9.36
+		c0-5.169,4.19-9.36,9.36-9.36C126.831,121.636,131.021,125.827,131.021,130.996z"/>
+	<path id="icon-water" data-name="icon-water" fill="#808080" d="M159.1,165.669l10.4,18.012h-20.799L159.1,165.669z"/>
+	<path id="icon-tree" data-name="icon-tree" fill="#808080" d="M178.86,248.513c0,5.169-4.19,9.36-9.36,9.36s-9.36-4.191-9.36-9.36
+		c0-5.169,4.19-9.36,9.36-9.36S178.86,243.343,178.86,248.513z"/>
+	<path id="icon-forest" data-name="icon-forest" fill="#808080" d="M215.258,298.431c0,5.169-4.19,9.36-9.36,9.36s-9.36-4.19-9.36-9.36
+		s4.19-9.36,9.36-9.36S215.258,293.262,215.258,298.431z"/>
+	<path id="icon-crossroads" data-name="icon-crossroads" fill="#808080" d="M247.456,354.067c0,5.169-4.19,9.36-9.36,9.36c-5.169,0-9.36-4.19-9.36-9.36
+		s4.19-9.36,9.36-9.36C243.266,344.708,247.456,348.898,247.456,354.067z"/>
+	<path id="icon-cocada" data-name="icon-cocada" fill="#808080" d="M298.456,419.067c0,5.169-4.19,9.36-9.36,9.36c-5.169,0-9.36-4.19-9.36-9.36
+		s4.19-9.36,9.36-9.36C294.266,409.708,298.456,413.898,298.456,419.067z"/>
+	<path id="icon-mural" data-name="icon-mural" fill="#808080" d="M321.335,505.385c0,5.169-4.19,9.36-9.36,9.36c-5.169,0-9.36-4.191-9.36-9.36
+		s4.19-9.36,9.36-9.36C317.145,496.025,321.335,500.216,321.335,505.385z"/>
+	<path id="icon-entrance" data-name="icon-entrance" fill="#808080" d="M362.934,580.263c0,5.169-4.19,9.36-9.36,9.36c-5.169,0-9.36-4.19-9.36-9.36
+		c0-5.169,4.19-9.36,9.36-9.36C358.744,570.903,362.934,575.093,362.934,580.263z"/>
+</g>
+<style>
+#g-map_forest-desktop-interactions-img rect, #g-map_forest-desktop-interactions-img circle, #g-map_forest-desktop-interactions-img path, #g-map_forest-desktop-interactions-img line, #g-map_forest-desktop-interactions-img polyline, #g-map_forest-desktop-interactions-img polygon { vector-effect: non-scaling-stroke; }
+</style>
+</svg>
+
+		<div id="waterfall" class="g-interactions g-aiAbs g-aiPointText" style="top:6.558%;margin-top:-9.4px;right:36.6821%;width:140px;">
+			<p class="g-pstyle0">Quebrada Quintero</p>
+		</div>
+		<div id="g-ai0-2" class="g-Layer_1 g-aiAbs" style="top:5.8279%;left:2.4671%;width:26.4106%;">
+			<p class="g-pstyle1">EL ÁVILA NATIONAL PARK</p>
+		</div>
+		<div id="descent" class="g-interactions g-aiAbs g-aiPointText" style="top:18.3802%;margin-top:-9.4px;left:62.2992%;width:102px;">
+			<p class="g-pstyle2">Last descent</p>
+		</div>
+		<div id="stairs" class="g-interactions g-aiAbs g-aiPointText" style="top:19.5458%;margin-top:-9.4px;left:16.2065%;width:99px;">
+			<p class="g-pstyle2">Rustic stairs</p>
+		</div>
+		<div id="caracas" class="g-interactions g-aiAbs g-aiPointText" style="top:20.5786%;margin-top:-10.6px;right:47.6088%;width:128px;">
+			<p class="g-pstyle3">A view of the city</p>
+		</div>
+		<div id="trunk" class="g-interactions g-aiAbs g-aiPointText" style="top:33.0331%;margin-top:-9.4px;left:48.7343%;width:64px;">
+			<p class="g-pstyle2">Trunks</p>
+		</div>
+		<div id="tree" class="g-interactions g-aiAbs g-aiPointText" style="top:42.1912%;margin-top:-9.4px;left:11.1284%;width:87px;">
+			<p class="g-pstyle2">Fallen tree</p>
+		</div>
+		<div id="forest" class="g-interactions g-aiAbs g-aiPointText" style="top:52.0819%;margin-top:-17.8px;right:77.0782%;width:88px;">
+			<p class="g-pstyle4">The path...</p>
+		</div>
+		<div id="shortcut" class="g-interactions g-aiAbs g-aiPointText" style="top:50.6832%;margin-top:-9.4px;left:45.2613%;width:129px;">
+			<p class="g-pstyle2">&ldquo;Avoid shortcuts&rdquo;</p>
+		</div>
+		<div id="plain" class="g-interactions g-aiAbs g-aiPointText" style="top:51.6823%;margin-top:-9.4px;right:66.344%;width:65px;">
+			<p class="g-pstyle4">A plain</p>
+		</div>
+		<div id="crossroads" class="g-interactions g-aiAbs g-aiPointText" style="top:59.3417%;margin-top:-9.4px;left:29.9502%;width:93px;">
+			<p class="g-pstyle2">Crossroads</p>
+		</div>
+		<div id="cocada" class="g-interactions g-aiAbs g-aiPointText" style="top:69.8318%;margin-top:-9.4px;left:36.0591%;width:109px;">
+			<p class="g-pstyle2">Cocada booth</p>
+		</div>
+		<div id="mural" class="g-interactions g-aiAbs g-aiPointText" style="top:83.9852%;margin-top:-9.4px;left:39.7196%;width:61px;">
+			<p class="g-pstyle2">Mural </p>
+		</div>
+		<div id="g-ai0-14" class="g-Layer_1 g-aiAbs g-aiPointText" style="transform: matrix(0.9987,-0.0509,0.0509,0.9987,0,0);transform-origin: 50% 55.3275063732376%;-webkit-transform: matrix(0.9987,-0.0509,0.0509,0.9987,0,0);-webkit-transform-origin: 50% 55.3275063732376%;-ms-transform: matrix(0.9987,-0.0509,0.0509,0.9987,0,0);-ms-transform-origin: 50% 55.3275063732376%;top:87.1489%;margin-top:-9.4px;left:84.1773%;margin-left:-91px;width:182px;">
+			<p class="g-pstyle5">Boyacá Avenue - Highway</p>
+		</div>
+		<div id="g-ai0-15" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:94.9749%;margin-top:-9.4px;left:10.1716%;width:32px;">
+			<p class="g-pstyle2">N</p>
+		</div>
+		<div id="entrance" class="g-interactions g-aiAbs g-aiPointText" style="top:96.1404%;margin-top:-9.4px;left:44.1922%;width:164px;">
+			<p class="g-pstyle2">Sabas Nieves Entrance</p>
+		</div>
+		<div id="g-ai0-17" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:96.8065%;margin-top:-9.4px;left:3.0763%;width:53px;">
+			<p class="g-pstyle2">50 m</p>
+		</div>
+		<div id="g-ai0-18" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:97.8055%;margin-top:-9.4px;left:72.7354%;width:33px;">
+			<p class="g-pstyle2">&copy;</p>
+		</div>
+		<div id="g-ai0-19" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:97.8055%;margin-top:-9.4px;left:74.1558%;width:119px;">
+			<p class="g-pstyle2">OpenStreetMap</p>
+		</div>
+		<div id="g-ai0-20" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:97.8055%;margin-top:-9.4px;left:86.2062%;width:98px;">
+			<p class="g-pstyle2">contributors</p>
+		</div>
+		<div id="g-ai0-21" class="g-Layer_1 g-aiAbs g-aiPointText" style="transform: matrix(0.9585,0.2853,-0.2853,0.9585,0,0);transform-origin: 50% 55.3272292165227%;-webkit-transform: matrix(0.9585,0.2853,-0.2853,0.9585,0,0);-webkit-transform-origin: 50% 55.3272292165227%;-ms-transform: matrix(0.9585,0.2853,-0.2853,0.9585,0,0);-ms-transform-origin: 50% 55.3272292165227%;top:103.1339%;margin-top:-9.4px;left:65.2796%;margin-left:-72.5px;width:145px;">
+			<p class="g-pstyle6">10.&deg; TRANSVERSAL</p>
+		</div>
+		<div id="g-ai0-22" class="g-Layer_1 g-aiAbs g-aiPointText" style="transform: matrix(0.9585,0.2853,-0.2853,0.9585,0,0);transform-origin: 50% 55.3272292165227%;-webkit-transform: matrix(0.9585,0.2853,-0.2853,0.9585,0,0);-webkit-transform-origin: 50% 55.3272292165227%;-ms-transform: matrix(0.9585,0.2853,-0.2853,0.9585,0,0);-ms-transform-origin: 50% 55.3272292165227%;top:103.1339%;margin-top:-9.4px;left:65.2796%;margin-left:-72.5px;width:145px;">
+			<p class="g-pstyle6">10.&deg; TRANSVERSAL</p>
+		</div>
+	</div>
+
+	<!-- Artboard: mobile -->
+	<div id="g-map_forest-mobile" class="g-artboard" style="max-width: 375px;max-height: 602px" data-aspect-ratio="0.623" data-min-width="0" data-max-width="832">
+<div style="padding: 0 0 160.5862% 0;"></div>
+		<img id="g-map_forest-mobile-img" class="g-map_forest-mobile-img g-aiImg" alt="" src="map_forest-mobile.png"/>
+<!-- Generator: Adobe Illustrator 24.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg class="g-map_forest-mobile-interactions-img g-aiImg" version="1.2" baseProfile="tiny" id="g-map_forest-mobile-interactions-img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 x="0px" y="0px" viewBox="0 0 375 602.198" overflow="visible" xml:space="preserve">
+<g>
+	<path id="trail-2" data-name="trail" fill="none" stroke="#E67C1D" stroke-width="3.6383" stroke-linecap="round" stroke-linejoin="round" d="
+		M333.161,35.747l-5.135,11.916l2.574,6.979h-3.431l-0.858,6.107l-1.715,4.362l-0.167-0.258l-1.549-0.614l-4.289-1.745l-1.438,0.176
+		l-1.134,1.569l-0.858,6.979l-6.861-4.362l-6.005,2.618l-2.573,2.617l-1.716,2.618v3.489v2.617h-3.431l-3.431,1.745l-0.186,0.486
+		l0.186,1.259l-0.857,8.724l-6.004-0.873h-6.005l-3.431-0.873l-3.43,1.745l-3.431,10.469l-9.435-2.618l-2.574,0.873l-1.716,0.873
+		h-2.573h-3.431l-2.573-0.873l-2.574-0.873h-3.431l-2.573,1.745v4.362l-1.716,2.618l-0.858,2.617v2.618l-0.857,2.617l0.857,2.618
+		l-0.857,1.744l-1.716,2.618l-0.857,2.617l-1.716,2.618l-2.574,2.617v2.618l-2.573,2.617l-0.858,1.745l-0.857,2.618v2.617v2.618
+		v2.617l-1.716,2.618l-1.716,1.744l-1.716,1.745l-1.716,1.744l-2.573,0.873l-2.574,1.745l-1.716,0.873h-2.573l-2.573-0.873
+		l-3.431-0.873h-3.431l-3.431,1.745l-1.716,2.617l-2.573,1.745l-1.716,6.979l4.288,11.34l-4.288,7.852l-4.289,10.469v9.596
+		l0.858,2.617l2.573-0.873l1.716-0.872l2.574-0.873l2.573-0.873h2.573h2.574h2.573l2.574,0.873l0.857,2.617v2.618l-0.857,2.617
+		l2.573-0.873l-2.573,0.873l-2.574,2.618l-3.431-0.873l-2.573-0.873l-2.573,0.873l-1.716,2.617l-1.716,1.745l-2.574,1.745
+		l-0.857,1.744l-1.716-1.744l-2.573,0.873l-1.716,2.617l-2.574,1.745l-1.716,1.744h-2.573l-2.574-0.872l-0.857-1.745l-2.573-1.745
+		h-2.574l-2.573-1.744l-1.716-0.873l-2.574-0.872l-2.573-1.745l-0.857-2.617l-0.858-2.618l-0.857-1.744v-3.49l-1.716-1.744
+		l-1.716-2.618l-1.716-0.873l-1.716-2.617l-1.716-1.745l-1.716-3.489l-1.716-1.745v-2.617l-1.716-2.618l-1.716-2.617l-0.857-1.745
+		l-2.574-2.617l-1.716-1.745l-2.573-0.873l-1.716-1.744l-1.716-2.618l-0.857-2.617l-1.716-1.745v-2.618l-0.858-2.617l-1.716-2.618
+		l-0.857-2.617l-1.716-2.618l-1.716-1.744l-1.716-1.745l-2.573-1.745l-1.716-1.744l-1.716-1.745l-2.574-1.744l-1.716-1.745
+		l-0.857-2.618l-2.573-2.617l-2.574-0.873l-2.573-0.873h-2.574l-2.573-1.744l-2.573-1.745l-0.858-1.745l-1.716-0.873l-2.573-1.744
+		l-1.716-1.745l-1.716-2.617l-2.573-0.873l-1.716-2.618l2.573,0.873h-2.573l-2.574-1.745l-2.573-1.744l-1.716-1.745l-2.574-0.873
+		l1.716-2.617l-0.857-2.618l-2.573-0.873l-0.858-2.617l-1.716-2.618l-1.716-2.617l-4.288-2.618l-4.288-0.872l-4.289-3.49
+		l-5.147-1.744l-4.288-4.363l-5.147,0.873l-10.292,0.873l11.151,6.979l7.719,2.617l2.573,3.49v4.362l-0.857,4.362l1.716,4.362
+		l5.147,1.745l5.146,3.489l-2.573,0.873l-0.857,6.979l-8.578,5.234l-3.431,23.554l24.875,15.703h5.146l2.574,10.469l12.008,9.596
+		l5.147,15.703l2.573-4.362l13.724,29.661l3.431,1.744l3.431,2.618l2.573,5.234v4.362h3.431l-0.857,3.489l1.715,2.618l1.716,2.617
+		v6.107l6.005,1.745l3.431,2.617l1.715,2.618l2.574,0.872l-0.858,2.618l-2.573,1.745h3.431l2.573,1.744l0.858,3.489l2.573,2.618
+		l2.574,3.489l0.857,4.362l0.857,3.49v2.617l1.716,2.618h2.574l3.431,2.617l3.431,2.618v4.362v4.362l1.715,3.489l-0.857,2.618v2.617
+		l1.716,2.617l2.573,1.745l0.858,2.618l0.857,3.489l0.858,3.489l1.716,1.745l1.716,2.617l1.716,2.618l0.857,2.617v3.489l0.857,2.618
+		v2.617l-0.857,1.745l-0.857,2.618l-1.716,1.744l-1.716,2.618l5.146-0.873l2.481,3.613l6.711,9.287l10.537,15.016l1.716,1.745
+		l1.716,1.744l1.716,2.618l1.716,2.617l1.716,2.618l1.716,2.617l2.573,2.618v3.489l-0.857,2.617l-2.574,1.745l-1.716,0.872
+		l-2.573,1.744"/>
+	<path id="icon-waterfall-2" data-name="icon-waterfall" fill="#808080" d="M343.951,29.211c0,3.761-3.049,6.811-6.811,6.811s-6.811-3.049-6.811-6.811
+		s3.049-6.811,6.811-6.811S343.951,25.45,343.951,29.211z"/>
+	<path id="icon-descent-2" data-name="icon-descent" fill="#808080" d="M331.086,67.048c0,3.761-3.049,6.811-6.811,6.811s-6.811-3.049-6.811-6.811
+		c0-3.761,3.049-6.811,6.811-6.811S331.086,63.287,331.086,67.048z"/>
+	<path id="icon-watersound-2" data-name="icon-watersound" fill="#808080" d="M293.25,86.981l7.567,13.107h-15.135L293.25,86.981z"/>
+	<path id="icon-frogs-2" data-name="icon-frogs" fill="#808080" d="M125.889,276.955l7.567,13.107h-15.135L125.889,276.955z"/>
+	<path id="icon-caracas-2" data-name="icon-caracas" fill="#808080" d="M277.358,92.777c0,3.761-3.049,6.811-6.811,6.811s-6.811-3.049-6.811-6.811
+		s3.049-6.811,6.811-6.811S277.358,89.016,277.358,92.777z"/>
+	<path id="icon-trunk-2" data-name="icon-trunk" fill="#808080" d="M233.467,131.371c0,3.761-3.049,6.811-6.811,6.811s-6.811-3.049-6.811-6.811
+		c0-3.761,3.049-6.811,6.811-6.811S233.467,127.61,233.467,131.371z"/>
+	<path id="icon-shortcut-2" data-name="icon-shortcut" fill="#808080" d="M210.765,218.396c0,3.761-3.049,6.811-6.811,6.811s-6.811-3.049-6.811-6.811
+		s3.049-6.811,6.811-6.811S210.765,214.634,210.765,218.396z"/>
+	<path id="icon-plain-2" data-name="icon-plain" fill="#808080" d="M160.82,224.45c0,3.761-3.049,6.811-6.811,6.811s-6.811-3.049-6.811-6.811
+		s3.049-6.811,6.811-6.811S160.82,220.688,160.82,224.45z"/>
+	<path id="icon-stairs-2" data-name="icon-stairs" fill="#808080" d="M35.202,95.048c0,3.761-3.049,6.811-6.811,6.811s-6.811-3.049-6.811-6.811
+		s3.049-6.811,6.811-6.811S35.202,91.286,35.202,95.048z"/>
+	<path id="icon-water-2" data-name="icon-water" fill="#808080" d="M55.634,120.277l7.567,13.107H48.066L55.634,120.277z"/>
+	<path id="icon-tree-2" data-name="icon-tree" fill="#808080" d="M70.012,180.559c0,3.761-3.049,6.811-6.811,6.811s-6.811-3.049-6.811-6.811
+		s3.049-6.811,6.811-6.811S70.012,176.798,70.012,180.559z"/>
+	<path id="icon-forest-2" data-name="icon-forest" fill="#808080" d="M96.498,216.882c0,3.761-3.049,6.811-6.811,6.811s-6.811-3.049-6.811-6.811
+		s3.049-6.811,6.811-6.811S96.498,213.121,96.498,216.882z"/>
+	<path id="icon-crossroads-2" data-name="icon-crossroads" fill="#808080" d="M119.926,257.366c0,3.761-3.049,6.811-6.811,6.811s-6.811-3.049-6.811-6.811
+		c0-3.761,3.049-6.811,6.811-6.811S119.926,253.605,119.926,257.366z"/>
+	<path id="icon-cocada-2" data-name="icon-cocada" fill="#808080" d="M157.037,304.664c0,3.761-3.049,6.811-6.811,6.811s-6.811-3.049-6.811-6.811
+		s3.049-6.811,6.811-6.811S157.037,300.903,157.037,304.664z"/>
+	<path id="icon-mural-2" data-name="icon-mural" fill="#808080" d="M173.685,367.473c0,3.761-3.049,6.811-6.811,6.811s-6.811-3.049-6.811-6.811
+		s3.049-6.811,6.811-6.811S173.685,363.712,173.685,367.473z"/>
+	<path id="icon-entrance-2" data-name="icon-entrance" fill="#808080" d="M203.954,421.958c0,3.761-3.049,6.811-6.811,6.811s-6.811-3.049-6.811-6.811
+		s3.049-6.811,6.811-6.811S203.954,418.197,203.954,421.958z"/>
+</g>
+<style>
+#g-map_forest-mobile-interactions-img rect, #g-map_forest-mobile-interactions-img circle, #g-map_forest-mobile-interactions-img path, #g-map_forest-mobile-interactions-img line, #g-map_forest-mobile-interactions-img polyline, #g-map_forest-mobile-interactions-img polygon { vector-effect: non-scaling-stroke; }
+</style>
+</svg>
+
+		<div id="g-ai1-1" class="g-Layer_1 g-aiAbs" style="top:1.9927%;left:1.9957%;width:34.6667%;">
+			<p class="g-pstyle0">EL ÁVILA </p>
+			<p class="g-pstyle0">NATIONAL PARK</p>
+		</div>
+		<div id="waterfall" class="g-interactions g-aiAbs g-aiPointText" style="top:5.0003%;margin-top:-20.1px;left:68.6159%;width:95px;">
+			<p class="g-pstyle1">Quebrada </p>
+			<p class="g-pstyle1">Quintero</p>
+		</div>
+		<div id="caracas" class="g-interactions g-aiAbs g-aiPointText" style="top:12.3523%;margin-top:-9.4px;right:25.8906%;width:128px;">
+			<p class="g-pstyle2">A view of the city</p>
+		</div>
+		<div id="descent" class="g-interactions g-aiAbs g-aiPointText" style="top:13.5147%;margin-top:-9.4px;left:83.7188%;width:73px;">
+			<p class="g-pstyle3">Descent</p>
+		</div>
+		<div id="stairs" class="g-interactions g-aiAbs g-aiPointText" style="top:15.0092%;margin-top:-9.4px;left:10.9353%;width:99px;">
+			<p class="g-pstyle3">Rustic stairs</p>
+		</div>
+		<div id="trunk" class="g-interactions g-aiAbs g-aiPointText" style="top:23.8103%;margin-top:-9.4px;left:62.7361%;width:64px;">
+			<p class="g-pstyle3">Trunks</p>
+		</div>
+		<div id="tree" class="g-interactions g-aiAbs g-aiPointText" style="top:31.7811%;margin-top:-9.4px;right:84.9781%;width:87px;">
+			<p class="g-pstyle2">Fallen tree</p>
+		</div>
+		<div id="shortcut" class="g-interactions g-aiAbs g-aiPointText" style="top:36.5968%;margin-top:-9.4px;left:57.1223%;width:129px;">
+			<p class="g-pstyle3">&ldquo;Avoid shortcuts&rdquo;</p>
+		</div>
+		<div id="plain" class="g-interactions g-aiAbs g-aiPointText" style="top:37.261%;margin-top:-9.4px;right:60.4418%;width:65px;">
+			<p class="g-pstyle2">A plain</p>
+		</div>
+		<div id="forest" class="g-interactions g-aiAbs g-aiPointText" style="top:37.9253%;margin-top:-9.4px;right:73.719%;width:88px;">
+			<p class="g-pstyle2">The path...</p>
+		</div>
+		<div id="crossroads" class="g-interactions g-aiAbs g-aiPointText" style="top:42.907%;margin-top:-9.4px;left:32.3741%;width:93px;">
+			<p class="g-pstyle3">Crossroads</p>
+		</div>
+		<div id="cocada" class="g-interactions g-aiAbs g-aiPointText" style="top:50.5457%;margin-top:-9.4px;left:42.2482%;width:109px;">
+			<p class="g-pstyle3">Cocada booth</p>
+		</div>
+		<div id="mural" class="g-interactions g-aiAbs g-aiPointText" style="top:60.6752%;margin-top:-9.4px;left:48.14%;width:61px;">
+			<p class="g-pstyle3">Mural </p>
+		</div>
+		<div id="g-ai1-14" class="g-Layer_1 g-aiAbs g-aiPointText" style="transform: matrix(0.995,-0.0999,0.0999,0.995,0,0);transform-origin: 50% 56.4443045940843%;-webkit-transform: matrix(0.995,-0.0999,0.0999,0.995,0,0);-webkit-transform-origin: 50% 56.4443045940843%;-ms-transform: matrix(0.995,-0.0999,0.0999,0.995,0,0);-ms-transform-origin: 50% 56.4443045940843%;top:65.3869%;margin-top:-7.8px;left:20.926%;margin-left:-71px;width:142px;">
+			<p class="g-pstyle4">Boyacá Ave. - Highway</p>
+		</div>
+		<div id="entrance" class="g-interactions g-aiAbs g-aiPointText" style="top:69.6424%;margin-top:-9.4px;left:55.3943%;width:164px;">
+			<p class="g-pstyle3">Sabas Nieves Entrance</p>
+		</div>
+		<div id="g-ai1-16" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:73.2957%;margin-top:-9.4px;left:17.7828%;width:32px;">
+			<p class="g-pstyle3">N</p>
+		</div>
+		<div id="g-ai1-17" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:74.6241%;margin-top:-9.4px;left:6.3145%;width:53px;">
+			<p class="g-pstyle3">50 m</p>
+		</div>
+		<div id="g-ai1-18" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:75.9526%;margin-top:-9.4px;left:67.2038%;width:33px;">
+			<p class="g-pstyle3">&copy;</p>
+		</div>
+		<div id="g-ai1-19" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:75.9526%;margin-top:-9.4px;left:70.2768%;width:119px;">
+			<p class="g-pstyle3">OpenStreetMap</p>
+		</div>
+	</div>
+
+</div>
+
+<!-- End ai2html - 2023-08-06 19:03 -->
+
+
+
+<!-- End ai2html - 2023-08-06 18:40 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ai2html goes above this line -->
+
+          </div>
+        </div>
+
+        <div class="scrolly-overlay">
+          <div class="step" id="step-zero">
+            <p>After my father died, I traveled to Caracas, Venezuela's capital city, for his funeral. One afternoon, one of my cousins invited us to go to Quebrada Quintero, a small waterfall within a 20-minute walk.
+            </p>
+            <img class="fit" src="/tiny_images/entrance_sign.png">
+          </div>
+          <div class="step" id="step-one">
+            <p>The trail is part of the Ávila National Park, officially called Waraira Repano. The range of mountains can be seen from almost everywhere in the city, but it had been years since I walked on any of its trails. 
+            </p>
+            <img class="fit" src="/tiny_images/park_entrance.png">
+          </div>
+          <div class="step" id="step-two">
+            <p>A mural title "Danzas Tradicionales" (Traditional dances") welcomes visitors. </p>
+            <img class="fit" src="/tiny_images/mural_tunnel.png">
+          </div>
+          <div class="step" id="step-three">
+            <p>I felt at peace as soon as I entered the trail and passed the Cocada booth en route to the waterfall. The Summer heat disappeared in the tree canopy.  The frogs sang.</p>
+            <img class="fit" src="/tiny_images/tree_light.png">
+          </div>
+          <div class="step" id="step-four">
+            <p>I didn't know it then, but by noticing the trail with all my senses, I was “forest bathing”. The Japanese Ministry of Agriculture created the term <i>shinrin-yoku</i> in the early 80s. It also translates as “absorbing the forest atmosphere.” </p>
+            <img class="fit" src="/tiny_images/roots.png">
+          </div>
+          <div class="step" id="step-five">
+            <p>The process greatly benefits humans, especially in big, stressful cities like Caracas. Forest bathing, can help lower blood pressure, heart rate, and cortisol levels, <a class="dotted_link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5580555/">according to studies</a>. </p>
+            <img class="fit" src="/tiny_images/fallen_tree.png">
+          </div>
+          <div class="step" id="step-six">
+            <p>It certainly helped me grieve after months at hospitals, witnessing my father's health deteriorate.</p>
+            <img class="fit" src="/tiny_images/sign_evite_atajos.png">
+          </div>
+          <div class="step" id="step-seven">
+            <p>I heard the city intruding into the forest as we approached the Quintero Ravine. But then I saw the view: Caracas in all of its splendor. </p>
+            <img class="fit" src="/tiny_images/caracas.png">
+          </div>
+          <div class="step" id="step-eight">
+            <p>This green space, el Ávila National Park, continues offering an escape from the madness of the city. It is so close and at the same time so far away from the chaos. I believe is one of the reasons caraqueños have survived years of political upheaval and crime.
+            </p>
+          </div>
+          <div class="step" id="step-nine">
+              <p>  SOUNDS OF CARACAS TRAFFIC </p> 
+              <img class="fit" src="/tiny_images/bus_waiting.png">
+              <img class="fit" src="tiny_images/traffic_2.png">
+              <img class="fit" src="/tiny_images/street.png">
+          </div>
+          <div class="step" id="step-ten">
+            <p>We are finally very close to the waterfall. The 20-minute trail reminded me why my father loved nature so much. He was a farmer with a mission to plant at least 10,000 trees annually. I know I will always find him in the trees.</p>
+            <img class="fit" src="/tiny_images/barefeet.png">
+          </div>
+          <div class="step" id="step-eleven">
+            <p>Forest bathing is about being present with nature. It doesn’t have to be a forest and it certainly does not need to involve actually sumergin in the water but, according to Dr. Qing Li, author of <i>Forest Bathing: How Trees Can Help You Find Health and Happiness</i>, you should locate a place that suits you to form a strong connection.</p>
+          </div>
+          <div class="step" id="step-twelve">
+            <p>For me, that place was Quebrada Quintero.</p>
+            <img class="fit" src="/tiny_images/signandwater.png">
+          </div>
+
+
+        </div>
+      </section>
+
+    <script>
+      
+      /* Scrollytelling code goes under here */
+      function hideNote() {
+        d3.selectAll("[data-name='trail']").classed('hidden', true)
+        d3.selectAll("#entrance").classed('hidden', true)
+        d3.selectAll("[data-name='icon-entrance']").classed('hidden', true)
+        d3.selectAll("#mural").classed('hidden', true)
+        d3.selectAll("[data-name='icon-mural']").classed('hidden', true)
+        d3.selectAll("#cocada").classed('hidden', true)
+        d3.selectAll("[data-name='icon-cocada']").classed('hidden', true)
+        d3.selectAll("#crossroads").classed('hidden', true)
+        d3.selectAll("[data-name='icon-crossroads']").classed('hidden', true)
+        d3.selectAll("#forest").classed('hidden', true)
+        d3.selectAll("[data-name='icon-forest']").classed('hidden', true)
+        d3.selectAll("#tree").classed('hidden', true)
+        d3.selectAll("[data-name='icon-tree']").classed('hidden', true)
+        d3.selectAll("[data-name='icon-water']").classed('hidden', true)
+        d3.selectAll("#stairs").classed('hidden', true)
+        d3.selectAll("[data-name='icon-stairs']").classed('hidden', true)
+        d3.selectAll("#plain").classed('hidden', true)
+        d3.selectAll("[data-name='icon-plain']").classed('hidden', true)
+        d3.selectAll("#shortcut").classed('hidden', true)
+        d3.selectAll("[data-name='icon-shortcut']").classed('hidden', true)
+        d3.selectAll("#trunk").classed('hidden', true)
+        d3.selectAll("[data-name='icon-trunk']").classed('hidden', true)
+        d3.selectAll("#caracas").classed('hidden', true)
+        d3.selectAll("[data-name='icon-caracas']").classed('hidden', true)
+        d3.selectAll("[data-name='icon-frogs']").classed('hidden', true)
+        d3.selectAll("[data-name='icon-watersound']").classed('hidden', true)
+        d3.selectAll("#descent").classed('hidden', true)
+        d3.selectAll("[data-name='icon-descent']").classed('hidden', true)
+        d3.selectAll("#waterfall").classed('hidden', true)
+        d3.selectAll("[data-name='icon-waterfall']").classed('hidden', true)
+      }
+
+      hideNote()
+
+      d3.select("#step-one").on('stepout', function(e) {
+      if(e.detail.direction === 'up') {
+    // undo the changes from step one
+      hideNote()
+      }
+    })
+
+      d3.select("#step-one").on('stepin', function(e){
+        console.log("Got to step one")
+        d3.selectAll("[data-name='trail']").classed('hidden', false)
+        d3.selectAll("#waterfall").classed('hidden', false)
+        d3.selectAll("[data-name='icon-waterfall']").classed('hidden', false).style('fill','#808080')
+        d3.selectAll("#entrance").classed('hidden', false)
+        d3.selectAll("[data-name='icon-entrance']").classed('hidden', false).style('fill', '#E77B1D')
+        d3.selectAll("[data-name='icon-entrance']").style('stroke', 'black')
+
+      })
+
+      d3.select("#step-two").on('stepin', function(e){
+        console.log("Got to step two")
+        d3.selectAll("[data-name='trail']").classed('hidden', false)
+        d3.selectAll("#entrance").classed('hidden', false)
+        d3.selectAll("[data-name='icon-entrance']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-entrance']").style('stroke', 'none')
+        d3.selectAll("#mural").classed('hidden', false)
+        d3.selectAll("[data-name='icon-mural']").classed('hidden', false).style('fill', '#E77B1D')
+        d3.selectAll("[data-name='icon-mural']").style('stroke', 'black')
+
+      })
+
+      d3.select("#step-three").on('stepin', function(e){
+        console.log("Got to step three")
+        d3.selectAll("[data-name='trail']").classed('hidden', false)
+        d3.selectAll("#entrance").classed('hidden', false)
+        d3.selectAll("[data-name='icon-entrance']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-entrance']").style('stroke', 'none')
+        d3.selectAll("#mural").classed('hidden', false)
+        d3.selectAll("[data-name='icon-mural']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-mural']").style('stroke', 'none')
+        d3.selectAll("#crossroads").classed('hidden', false)
+        d3.selectAll("[data-name='icon-crossroads']").classed('hidden', false).style('fill', '#E77B1D')
+        d3.selectAll("[data-name='icon-crossroads']").style('stroke', 'black')
+
+      })
+
+      d3.select("#step-four").on('stepin', function(e){
+        console.log("Got to step four")
+        d3.selectAll("[data-name='trail']").classed('hidden', false)
+        d3.selectAll("#entrance").classed('hidden', false)
+        d3.selectAll("[data-name='icon-entrance']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-entrance']").style('stroke', 'none')
+        d3.selectAll("#mural").classed('hidden', false)
+        d3.selectAll("[data-name='icon-mural']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-mural']").style('stroke', 'none')
+        d3.selectAll("#crossroads").classed('hidden', false)
+        d3.selectAll("[data-name='icon-crossroads']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-crossroads']").style('stroke', 'none')
+        d3.selectAll("#forest").classed('hidden', false)
+        d3.selectAll("[data-name='icon-forest']").classed('hidden', false).style('fill', '#E77B1D')
+        d3.selectAll("[data-name='icon-forest']").style('stroke', 'black')
+
+      })
+
+      d3.select("#step-five").on('stepin', function(e){
+        console.log("Got to step five")
+        d3.selectAll("[data-name='trail']").classed('hidden', false)
+        d3.selectAll("#entrance").classed('hidden', false)
+        d3.selectAll("[data-name='icon-entrance']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-entrance']").style('stroke', 'none')
+        d3.selectAll("#mural").classed('hidden', false)
+        d3.selectAll("[data-name='icon-mural']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-mural']").style('stroke', 'none')
+        d3.selectAll("#crossroads").classed('hidden', false)
+        d3.selectAll("[data-name='icon-crossroads']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-crossroads']").style('stroke', 'none')
+        d3.selectAll("#forest").classed('hidden', false)
+        d3.selectAll("[data-name='icon-forest']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon']").style('stroke', 'none')
+        d3.selectAll("#tree").classed('hidden', false)
+        d3.selectAll("[data-name='icon-tree']").classed('hidden', false).style('fill', '#E77B1D')
+        d3.selectAll("[data-name='icon-tree']").style('stroke', 'black')
+
+      })
+
+      d3.select("#step-six").on('stepin', function(e){
+        console.log("Got to step six")
+        d3.selectAll("[data-name='trail']").classed('hidden', false)
+        d3.selectAll("#entrance").classed('hidden', false)
+        d3.selectAll("[data-name='icon-entrance']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-entrance']").style('stroke', 'none')
+        d3.selectAll("#mural").classed('hidden', false)
+        d3.selectAll("[data-name='icon-mural']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-mural']").style('stroke', 'none')
+        d3.selectAll("#crossroads").classed('hidden', false)
+        d3.selectAll("[data-name='icon-crossroads']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-crossroads']").style('stroke', 'none')
+        d3.selectAll("#forest").classed('hidden', false)
+        d3.selectAll("[data-name='icon-forest']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-forest']").style('stroke', 'none')
+        d3.selectAll("#tree").classed('hidden', false)
+        d3.selectAll("[data-name='icon-tree']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-tree']").style('stroke', 'none')
+        d3.selectAll("#shortcut").classed('hidden', false)
+        d3.selectAll("[data-name='icon-shortcut']").classed('hidden', false).style('fill', '#E77B1D')
+        d3.selectAll("[data-name='icon-shortcut']").style('stroke', 'black')
+
+      })
+
+      d3.select("#step-seven").on('stepin', function(e){
+        console.log("Got to step seven")
+        d3.selectAll("[data-name='trail']").classed('hidden', false)
+        d3.selectAll("#entrance").classed('hidden', false)
+        d3.selectAll("[data-name='icon-entrance']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-entrance']").style('stroke', 'none')
+        d3.selectAll("#mural").classed('hidden', false)
+        d3.selectAll("[data-name='icon-mural']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-mural']").style('stroke', 'none')
+        d3.selectAll("#crossroads").classed('hidden', false)
+        d3.selectAll("[data-name='icon-crossroads']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-crossroads']").style('stroke', 'none')
+        d3.selectAll("#forest").classed('hidden', false)
+        d3.selectAll("[data-name='icon-forest']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon']").style('stroke', 'none')
+        d3.selectAll("#tree").classed('hidden', false)
+        d3.selectAll("[data-name='icon-tree']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-tree']").style('stroke', 'none')
+        d3.selectAll("#shortcut").classed('hidden', false)
+        d3.selectAll("[data-name='icon-shortcut']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-shortcut']").style('stroke', 'none')
+        d3.selectAll("#caracas").classed('hidden', false)
+        d3.selectAll("[data-name='icon-caracas']").classed('hidden', false).style('fill', '#E77B1D')
+        d3.selectAll("[data-name='icon-caracas']").style('stroke', 'black')
+
+      })
+
+      d3.select("#step-eight").on('stepin', function(e){
+        console.log("Got to step eight")
+        d3.selectAll("[data-name='trail']").classed('hidden', false)
+        d3.selectAll("#entrance").classed('hidden', false)
+        d3.selectAll("[data-name='icon-entrance']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-entrance']").style('stroke', 'none')
+        d3.selectAll("#mural").classed('hidden', false)
+        d3.selectAll("[data-name='icon-mural']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-mural']").style('stroke', 'none')
+        d3.selectAll("#crossroads").classed('hidden', false)
+        d3.selectAll("[data-name='icon-crossroads']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-crossroads']").style('stroke', 'none')
+        d3.selectAll("#forest").classed('hidden', false)
+        d3.selectAll("[data-name='icon-forest']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon']").style('stroke', 'none')
+        d3.selectAll("#tree").classed('hidden', false)
+        d3.selectAll("[data-name='icon-tree']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-tree']").style('stroke', 'none')
+        d3.selectAll("#shortcut").classed('hidden', false)
+        d3.selectAll("[data-name='icon-shortcut']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-shortcut']").style('stroke', 'none')
+        d3.selectAll("#caracas").classed('hidden', false)
+        d3.selectAll("[data-name='icon-caracas']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-caracas']").style('stroke', 'none')
+        d3.selectAll("#descent").classed('hidden', false)
+        d3.selectAll("[data-name='icon-descent']").classed('hidden', false).style('fill', '#E77B1D')
+        d3.selectAll("[data-name='icon-descent']").style('stroke', 'black')
+
+      })
+
+      d3.select("#step-nine").on('stepin', function(e){
+        console.log("Got to step nine")
+        d3.selectAll("[data-name='trail']").classed('hidden', false)
+        d3.selectAll("#entrance").classed('hidden', false)
+        d3.selectAll("[data-name='icon-entrance']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-entrance']").style('stroke', 'none')
+        d3.selectAll("#mural").classed('hidden', false)
+        d3.selectAll("[data-name='icon-mural']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-mural']").style('stroke', 'none')
+        d3.selectAll("#crossroads").classed('hidden', false)
+        d3.selectAll("[data-name='icon-crossroads']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-crossroads']").style('stroke', 'none')
+        d3.selectAll("#forest").classed('hidden', false)
+        d3.selectAll("[data-name='icon-forest']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon']").style('stroke', 'none')
+        d3.selectAll("#tree").classed('hidden', false)
+        d3.selectAll("[data-name='icon-tree']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-tree']").style('stroke', 'none')
+        d3.selectAll("#shortcut").classed('hidden', false)
+        d3.selectAll("[data-name='icon-shortcut']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-shortcut']").style('stroke', 'none')
+        d3.selectAll("#caracas").classed('hidden', false)
+        d3.selectAll("[data-name='icon-caracas']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-caracas']").style('stroke', 'none')
+        d3.selectAll("#descent").classed('hidden', false)
+        d3.selectAll("[data-name='icon-descent']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-descent']").style('stroke', 'none')
+      })
+     
+      d3.select("#step-ten").on('stepin', function(e){
+        console.log("Got to step ten")
+        d3.selectAll("[data-name='trail']").classed('hidden', false)
+        d3.selectAll("#entrance").classed('hidden', false)
+        d3.selectAll("[data-name='icon-entrance']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-entrance']").style('stroke', 'none')
+        d3.selectAll("#mural").classed('hidden', false)
+        d3.selectAll("[data-name='icon-mural']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-mural']").style('stroke', 'none')
+        d3.selectAll("#crossroads").classed('hidden', false)
+        d3.selectAll("[data-name='icon-crossroads']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-crossroads']").style('stroke', 'none')
+        d3.selectAll("#forest").classed('hidden', false)
+        d3.selectAll("[data-name='icon-forest']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon']").style('stroke', 'none')
+        d3.selectAll("#tree").classed('hidden', false)
+        d3.selectAll("[data-name='icon-tree']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-tree']").style('stroke', 'none')
+        d3.selectAll("#shortcut").classed('hidden', false)
+        d3.selectAll("[data-name='icon-shortcut']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-shortcut']").style('stroke', 'none')
+        d3.selectAll("#caracas").classed('hidden', false)
+        d3.selectAll("[data-name='icon-caracas']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-caracas']").style('stroke', 'none')
+        d3.selectAll("#descent").classed('hidden', false)
+        d3.selectAll("[data-name='icon-descent']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-descent']").style('stroke', 'none')
+
+      })
+
+      d3.select("#step-eleven").on('stepin', function(e){
+        console.log("Got to step eleven")
+        d3.selectAll("[data-name='trail']").classed('hidden', false)
+        d3.selectAll("#entrance").classed('hidden', false)
+        d3.selectAll("[data-name='icon-entrance']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-entrance']").style('stroke', 'none')
+        d3.selectAll("#mural").classed('hidden', false)
+        d3.selectAll("[data-name='icon-mural']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-mural']").style('stroke', 'none')
+        d3.selectAll("#crossroads").classed('hidden', false)
+        d3.selectAll("[data-name='icon-crossroads']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-crossroads']").style('stroke', 'none')
+        d3.selectAll("#forest").classed('hidden', false)
+        d3.selectAll("[data-name='icon-forest']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon']").style('stroke', 'none')
+        d3.selectAll("#tree").classed('hidden', false)
+        d3.selectAll("[data-name='icon-tree']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-tree']").style('stroke', 'none')
+        d3.selectAll("#shortcut").classed('hidden', false)
+        d3.selectAll("[data-name='icon-shortcut']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-shortcut']").style('stroke', 'none')
+        d3.selectAll("#caracas").classed('hidden', false)
+        d3.selectAll("[data-name='icon-caracas']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-caracas']").style('stroke', 'none')
+        d3.selectAll("#descent").classed('hidden', false)
+        d3.selectAll("[data-name='icon-descent']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-descent']").style('stroke', 'none')
+
+      })
+
+      d3.select("#step-twelve").on('stepin', function(e){
+        console.log("Got to step ten")
+        d3.selectAll("[data-name='trail']").classed('hidden', false)
+        d3.selectAll("#entrance").classed('hidden', false)
+        d3.selectAll("[data-name='icon-entrance']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-entrance']").style('stroke', 'none')
+        d3.selectAll("#mural").classed('hidden', false)
+        d3.selectAll("[data-name='icon-mural']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-mural']").style('stroke', 'none')
+        d3.selectAll("#crossroads").classed('hidden', false)
+        d3.selectAll("[data-name='icon-crossroads']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-crossroads']").style('stroke', 'none')
+        d3.selectAll("#forest").classed('hidden', false)
+        d3.selectAll("[data-name='icon-forest']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon']").style('stroke', 'none')
+        d3.selectAll("#tree").classed('hidden', false)
+        d3.selectAll("[data-name='icon-tree']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-tree']").style('stroke', 'none')
+        d3.selectAll("#shortcut").classed('hidden', false)
+        d3.selectAll("[data-name='icon-shortcut']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-shortcut']").style('stroke', 'none')
+        d3.selectAll("#caracas").classed('hidden', false)
+        d3.selectAll("[data-name='icon-caracas']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-caracas']").style('stroke', 'none')
+        d3.selectAll("#descent").classed('hidden', false)
+        d3.selectAll("[data-name='icon-descent']").classed('hidden', false).style('fill', '#808080')
+        d3.selectAll("[data-name='icon-descent']").style('stroke', 'none')
+        d3.selectAll("#waterfall").classed('hidden', false)
+        d3.selectAll("[data-name='icon-waterfall']").classed('hidden', false).style('fill', '#E77B1D')
+        d3.selectAll("[data-name='icon-waterfall']").style('stroke', 'black')
+
+      })
+     
+
+
+   
+
+
+
+    </script>
+
+<script>
+    const scroller = scrollama();
+
+	scroller
+		.setup({
+			step: "#scrolly .scrolly-overlay .step",
+			offset: 0.75,
+			debug: false
+		})
+		.onStepEnter(function({ element, index, direction}) {
+			const event = new CustomEvent('stepin', { detail: { direction: direction } })
+			element.dispatchEvent(event);
+		})
+		.onStepExit(function({ element, index, direction }) {
+			const event = new CustomEvent('stepout', { detail: { direction: direction } })
+			element.dispatchEvent(event);
+		});
+
+	window.addEventListener("resize", scroller.resize);
+    </script>
+
+
+    <!-- ai2html resizer script -->
+
+<script type="text/javascript">
+  (function() {
+      // only want one resizer on the page
+      if (document.documentElement.className.indexOf("g-resizer-v3-init") > -1) return;
+      document.documentElement.className += " g-resizer-v3-init";
+      // require IE9+
+      if (!("querySelector" in document)) return;
+      function resizer() {
+          var elements = Array.prototype.slice.call(document.querySelectorAll(".g-artboard[data-min-width]")),
+              widthById = {};
+          elements.forEach(function(el) {
+              var parent = el.parentNode,
+                  width = widthById[parent.id] || parent.getBoundingClientRect().width,
+                  minwidth = el.getAttribute("data-min-width"),
+                  maxwidth = el.getAttribute("data-max-width");
+              widthById[parent.id] = width;
+
+              if (+minwidth <= width && (+maxwidth >= width || maxwidth === null)) {
+                  el.style.display = "block";
+              } else {
+                  el.style.display = "none";
+              }
+          });
+          try {
+              if (window.parent && window.parent.$) {
+                  window.parent.$("body").trigger("resizedcontent", [window]);
+              }
+              if (window.require) {
+                  require(['foundation/main'], function() {
+                      require(['shared/interactive/instances/app-communicator'], function(AppCommunicator) {
+                          AppCommunicator.triggerResize();
+                      });
+                  });
+              }
+          } catch(e) { console.log(e); }
+      }
+
+      document.addEventListener('DOMContentLoaded', resizer);
+      // feel free to replace throttle with _.throttle, if available
+      window.addEventListener('resize', throttle(resizer, 200));        
+
+      function throttle(func, wait) {
+          // from underscore.js
+          var _now = Date.now || function() { return new Date().getTime(); },
+              context, args, result, timeout = null, previous = 0;
+          var later = function() {
+              previous = _now();
+              timeout = null;
+              result = func.apply(context, args);
+              if (!timeout) context = args = null;
+          };
+          return function() {
+              var now = _now(), remaining = wait - (now - previous);
+              context = this;
+              args = arguments;
+              if (remaining <= 0 || remaining > wait) {
+                  if (timeout) {
+                      clearTimeout(timeout);
+                      timeout = null;
+                  }
+                  previous = now;
+                  result = func.apply(context, args);
+                  if (!timeout) context = args = null;
+              } else if (!timeout && options.trailing !== false) {
+                  timeout = setTimeout(later, remaining);
+              }
+              return result;
+          };
+      }
+
+     
+  })();
+</script>
+
+  </body>
+</html>
