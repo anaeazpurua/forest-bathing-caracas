@@ -148,11 +148,28 @@
         }
 
       .image__wrapper {
-          max-width: 1000px;
+          max-width:100%;
+          height: auto; 
           margin: 0 auto;
           text-align: center;
           margin-bottom: 43px;
         }
+      
+      .image-container {
+          display: flex; 
+          justify-content: center;
+          margin-bottom: 50px;
+
+        }
+
+      .image-container img {
+          width: 25%; 
+          max-width: 100%;
+          height: auto; 
+          padding-top: 20px;
+          padding: 5px;
+        }
+
         .hidden { visibility: hidden; }
 
       /* When it's less than 700 pixels wide, do normal scrollytelling */
@@ -1021,6 +1038,13 @@
   </p>
 
   <p class="article__text">For me, that place was <b style="background-color:#f2b580;">Quebrada Quintero.  </p>
+  </div>
+
+
+  <div class="image-container">
+    <img src="tiny_images/water_running.png" alt="Image 1">
+    <img src="tiny_images/stairs_mud.png" alt="Image 2">
+    <img src="tiny_images/planada camino.png" alt="Image 3">
 
   </body>
 </html>
