@@ -148,7 +148,7 @@
         }
 
       .image__wrapper {
-          max-width: 945px;
+          max-width: 1000px;
           margin: 0 auto;
           text-align: center;
           margin-bottom: 43px;
@@ -180,10 +180,7 @@
           order: 1;
           flex-grow: 2;
         }
-        /* .fit {
-        max-width: 100%;
-        max-height: 100%;
-      } */
+    
       }
     </style>
 	<script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
@@ -211,9 +208,6 @@
     </p>
 
     <p class="article__text">Keep <i>scrolling</i> to experience what I found on the trail that leads to a small waterfall known as Quebrada Quintero and <i>hit play for</i> some nature sounds.  </p>
-
-
-    
     
   </div>
       <section id="scrolly">
@@ -679,15 +673,14 @@
             <img src="tiny_images/traffic_2.png">
           </div>
           <div class="step" id="step-nine">
-            <p>We are finally very close to the waterfall. The 20-minute trail reminded me why my father loved nature so much. He was a farmer with a mission to plant thousands of trees annually. I know I will always find him in the trees.</p>
-        
+            <p>We are finally very close to the waterfall. The 20-minute trail reminded me why my father loved nature so much. He was a rancher with a mission to plant thousands of trees annually. </p>
+            <img src="tiny_images/trunks.png">
           </div>
-          <div class="step" id="step-ten">
-            <p><b>Forest bathing</b> is about being present with nature. It doesn't have to be a forest and it certainly does not need to involve actually sumergin in the water but, according to Dr. Qing Li, author of <i>Forest Bathing: How Trees Can Help You Find Health and Happiness</i>, you should locate a place that suits you to form a strong connection.</p>
-          </div>
-          <div class="step" id="step-eleven">
-            <p>For me, that place was <b style="background-color:#f2b580;">Quebrada Quintero.</b></p>
-            <img class="fit" src="tiny_images/signandwater.png">
+
+            <div class="step" id="step-ten">
+            <p>I know I will always find him in the forest. </p>
+            <img src="tiny_images/signandwater.png">
+            </div>
           </div>
 
 
@@ -883,67 +876,46 @@
         console.log("Got to step ten")
         d3.selectAll("[data-name='trail']").classed('hidden', false)
         d3.selectAll("#entrance").classed('hidden', false)
-        d3.selectAll("[data-name='icon-entrance']").classed('hidden', false)
-        d3.selectAll("[data-name='icon-entrance']").style('stroke', 'none')
+        d3.selectAll("[data-name='icon-entrance']").classed('hidden', false).style('stroke', 'none')
         d3.selectAll("#mural").classed('hidden', false)
-        d3.selectAll("[data-name='icon-mural']").classed('hidden', false)
-        d3.selectAll("[data-name='icon-mural']").style('stroke', 'none')
+        d3.selectAll("[data-name='icon-mural']").classed('hidden', false).style('stroke', 'none')
         d3.selectAll("#crossroads").classed('hidden', false)
-        d3.selectAll("[data-name='icon-crossroads']").classed('hidden', false)
-        d3.selectAll("[data-name='icon-crossroads']").style('stroke', 'none')
+        d3.selectAll("[data-name='icon-crossroads']").classed('hidden', false).style('stroke', 'none')
         d3.selectAll("#forest").classed('hidden', false)
-        d3.selectAll("[data-name='icon-forest']").classed('hidden', false)
-        d3.selectAll("[data-name='icon']").style('stroke', 'none')
+        d3.selectAll("[data-name='icon-forest']").classed('hidden', false).style('stroke', 'none')
         d3.selectAll("#tree").classed('hidden', false)
-        d3.selectAll("[data-name='icon-tree']").classed('hidden', false)
-        d3.selectAll("[data-name='icon-tree']").style('stroke', 'none')
+        d3.selectAll("[data-name='icon-tree']").classed('hidden', false).style('stroke', 'none')
         d3.selectAll("#shortcut").classed('hidden', false)
-        d3.selectAll("[data-name='icon-shortcut']").classed('hidden', false)
-        d3.selectAll("[data-name='icon-shortcut']").style('stroke', 'none')
+        d3.selectAll("[data-name='icon-shortcut']").classed('hidden', false).style('stroke', 'none')
         d3.selectAll("#caracas").classed('hidden', false)
-        d3.selectAll("[data-name='icon-caracas']").classed('hidden', false)
-        d3.selectAll("[data-name='icon-caracas']").style('stroke', 'none')
+        d3.selectAll("[data-name='icon-caracas']").classed('hidden', false).style('stroke', 'none')
         d3.selectAll("#descent").classed('hidden', false)
         d3.selectAll("[data-name='icon-descent']").classed('hidden', false).style('stroke', 'none')
         d3.selectAll("[data-name='icon-waterfall']").classed('hidden', false).style('stroke', 'black').style('stroke-width', 2)
 
       })
 
-      d3.select("#step-eleven").on('stepin', function(e){
-        console.log("Got to step eleven")
+      d3.select("#step-ten").on('stepin', function(e){
+        console.log("Got to step ten")
         d3.selectAll("[data-name='trail']").classed('hidden', false)
         d3.selectAll("#entrance").classed('hidden', false)
-        d3.selectAll("[data-name='icon-entrance']").classed('hidden', false)
-        d3.selectAll("[data-name='icon-entrance']").style('stroke', 'none')
+        d3.selectAll("[data-name='icon-entrance']").classed('hidden', false).style('stroke', 'none')
         d3.selectAll("#mural").classed('hidden', false)
-        d3.selectAll("[data-name='icon-mural']").classed('hidden', false)
-        d3.selectAll("[data-name='icon-mural']").style('stroke', 'none')
+        d3.selectAll("[data-name='icon-mural']").classed('hidden', false).style('stroke', 'none')
         d3.selectAll("#crossroads").classed('hidden', false)
-        d3.selectAll("[data-name='icon-crossroads']").classed('hidden', false)
-        d3.selectAll("[data-name='icon-crossroads']").style('stroke', 'none')
+        d3.selectAll("[data-name='icon-crossroads']").classed('hidden', false).style('stroke', 'none')
         d3.selectAll("#forest").classed('hidden', false)
-        d3.selectAll("[data-name='icon-forest']").classed('hidden', false)
-        d3.selectAll("[data-name='icon']").style('stroke', 'none')
+        d3.selectAll("[data-name='icon-forest']").classed('hidden', false).style('stroke', 'none')
         d3.selectAll("#tree").classed('hidden', false)
-        d3.selectAll("[data-name='icon-tree']").classed('hidden', false)
-        d3.selectAll("[data-name='icon-tree']").style('stroke', 'none')
+        d3.selectAll("[data-name='icon-tree']").classed('hidden', false).style('stroke', 'none')
         d3.selectAll("#shortcut").classed('hidden', false)
-        d3.selectAll("[data-name='icon-shortcut']").classed('hidden', false)
-        d3.selectAll("[data-name='icon-shortcut']").style('stroke', 'none')
+        d3.selectAll("[data-name='icon-shortcut']").classed('hidden', false).style('stroke', 'none')
         d3.selectAll("#caracas").classed('hidden', false)
-        d3.selectAll("[data-name='icon-caracas']").classed('hidden', false)
-        d3.selectAll("[data-name='icon-caracas']").style('stroke', 'none')
+        d3.selectAll("[data-name='icon-caracas']").classed('hidden', false).style('stroke', 'none')
         d3.selectAll("#descent").classed('hidden', false)
-        d3.selectAll("[data-name='icon-descent']").classed('hidden', false)
-        d3.selectAll("[data-name='icon-descent']").style('stroke', 'none')
+        d3.selectAll("[data-name='icon-descent']").classed('hidden', false).style('stroke', 'none')
         d3.selectAll("[data-name='icon-waterfall']").classed('hidden', false).style('stroke', 'black').style('stroke-width', 2)
-
       })
-
-
-   
-
-
 
     </script>
 
@@ -1044,6 +1016,12 @@
      
   })();
 </script>
+<div class="content">
+  <p class="article__text"><b>Forest bathing</b> is about being present with nature. It doesn't have to be a forest and it certainly does not need to involve actually sumergin in the water but, according to Dr. Qing Li, author of <i><a target="_top" class="dotted_link" href="https://time.com/5259602/japanese-forest-bathing/">Forest Bathing: How Trees Can Help You Find Health and Happiness</a></i>, you should locate a place that suits you to form a strong connection.
+  </p>
+
+  <p class="article__text">For me, that place was <b style="background-color:#f2b580;">Quebrada Quintero.  </p>
 
   </body>
 </html>
+
